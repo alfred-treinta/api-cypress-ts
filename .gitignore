@@ -1,0 +1,8 @@
+# folders
+node_modules/
+cypress/videos/
+cypress/screenshots
+
+# files
+.env
+yarn.lock

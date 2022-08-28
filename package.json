@@ -1,0 +1,16 @@
+{
+  "name": "api-cypress-ts",
+  "version": "1.0.0",
+  "description": "Cypress api testing POC",
+  "scripts": {
+    "test": "cypress run --headless",
+    "test:dashboard": "sh runAndSaveOnDashboard.sh"
+  },
+  "author": "Alfred Tejeda",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "10.6.0",
+    "dotenv": "16.0.1",
+    "typescript": "4.8.2"
+  }
+}
