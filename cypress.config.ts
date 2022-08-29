@@ -6,6 +6,8 @@ dotenv.config()
 export default defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on)
+
       config.env.FIREBASE_BASE_URL = process.env.FIREBASE_BASE_URL
       config.env.FIREBASE_TREINTA_APIKEY = process.env.FIREBASE_TREINTA_APIKEY
       config.env.FIREBASE_TESTER_USER = process.env.FIREBASE_TESTER_USER
@@ -18,5 +20,11 @@ export default defineConfig({
       return config
     }
   },
-  videoUploadOnPasses: false
+  videoUploadOnPasses: false,
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    embeddedScreenshots: true,
+    inlineAssets: true
+  }
 })

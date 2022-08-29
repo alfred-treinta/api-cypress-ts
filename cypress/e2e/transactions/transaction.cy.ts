@@ -94,7 +94,8 @@ describe('Demo: CRUD on transactions', () => {
                 'authorization': `Bearer ${token}`
             }
         }).then((response) => {
-            cy.log(response.body)
+            expect(response.status).eql(HttpStatusCodes.Ok);
+            expect(response.duration).lessThan(1000)
         })
     })
 

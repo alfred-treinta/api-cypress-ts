@@ -2,7 +2,9 @@
 node_modules/
 cypress/videos/
 cypress/screenshots
+reports/
 
 # files
 .env
 yarn.lock
+.DS_Store
